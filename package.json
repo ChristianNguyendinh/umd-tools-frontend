@@ -4,6 +4,9 @@
   "description": "Front end for personal UMD APIs",
   "main": "server.js",
   "scripts": {
+    "clean": "rm -rf dist; mkdir -p dist",
+    "build": "tsc",
+    "start": "node dist/server.js",
     "test": "npm run test"
   },
   "repository": {
@@ -14,5 +17,12 @@
   "bugs": {
     "url": "https://github.com/ChristianNguyendinh/umd-tools-frontend/issues"
   },
-  "homepage": "https://github.com/ChristianNguyendinh/umd-tools-frontend#readme"
+  "homepage": "https://github.com/ChristianNguyendinh/umd-tools-frontend#readme",
+  "dependencies": {
+    "koa": "^2.6.2",
+    "koa-joi-router": "^5.1.0",
+    "koa-router": "^7.4.0",
+    "koa-views": "^6.1.4",
+    "typescript": "^3.1.6"
+  }
 }
