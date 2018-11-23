@@ -1,6 +1,7 @@
 import Koa from 'koa';
 import views from 'koa-views';
 import KoaRouter from 'koa-router';
+import config from './config';
 
 const app = new Koa();
 const router = new KoaRouter();
@@ -23,7 +24,15 @@ app.use(async (ctx, next) => {
 
 router.get('/', async (ctx, next) => {
     console.log('Root Request');
-    await ctx.render('test');
+    await ctx.render('test', { author: 'christian' });
+});
+
+router.get('/search', async (ctx, next) => {
+    console.log('Search Request');
+    await ctx.render('search', {
+        searchURI: config.searchApiUrl,
+        moreInfoUrl: config.umdMoreInfoUrl,
+    });
 });
 
 app.use(router.routes());
