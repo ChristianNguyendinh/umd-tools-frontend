@@ -1,0 +1,18 @@
+{
+  "name": "umd-tools-frontend",
+  "version": "0.0.1",
+  "description": "Front end for personal UMD APIs",
+  "main": "server.js",
+  "scripts": {
+    "test": "npm run test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ChristianNguyendinh/umd-tools-frontend.git"
+  },
+  "author": "christian",
+  "bugs": {
+    "url": "https://github.com/ChristianNguyendinh/umd-tools-frontend/issues"
+  },
+  "homepage": "https://github.com/ChristianNguyendinh/umd-tools-frontend#readme"
+}
