@@ -1,19 +1,19 @@
 import Koa from 'koa';
-import views from 'koa-views';
 import KoaRouter from 'koa-router';
-import config from './config';
 import serve from 'koa-static';
+import config from './config';
 
+const render = require('koa-ejs');
 const app = new Koa();
 const router = new KoaRouter();
 
-app.use(views(`${__dirname}/views`, {
-    map: {
-        html: 'lodash'
-    }
-}));
-
 app.use(serve(`${__dirname}/static`));
+
+render(app, {
+    root: `${__dirname}/views`,
+    layout: false,
+    viewExt: 'ejs'
+});
 
 app.use(async (ctx, next) => {
     try {

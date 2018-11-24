@@ -23,16 +23,12 @@
   "homepage": "https://github.com/ChristianNguyendinh/umd-tools-frontend#readme",
   "dependencies": {
     "@types/koa": "^2.0.47",
-    "@types/koa-joi-router": "^5.1.0",
     "@types/koa-router": "^7.0.35",
     "@types/koa-static": "^4.0.0",
-    "@types/koa-views": "^2.0.3",
     "koa": "^2.6.2",
-    "koa-joi-router": "^5.1.0",
+    "koa-ejs": "^4.1.2",
     "koa-router": "^7.4.0",
     "koa-static": "^5.0.0",
-    "koa-views": "^6.1.4",
-    "lodash": "^4.17.11",
     "typescript": "^3.1.6"
   }
 }
