@@ -25,9 +25,27 @@ app.use(async (ctx, next) => {
     }
 });
 
+// router.get('/', async (ctx, next) => {
+//     console.log('Root Request');
+//     await ctx.render('test', { author: 'christian' });
+// });
+
 router.get('/', async (ctx, next) => {
-    console.log('Root Request');
-    await ctx.render('test', { author: 'christian' });
+    await ctx.render('index');
+});
+
+router.get('/about', async (ctx, next) => {
+    await ctx.render('about');
+});
+
+router.get('/charts', async (ctx, next) => {
+    await ctx.render('charts', {
+        registrationApiUrl: config.registrationApiUrl
+    });
+});
+
+router.get('/help', async (ctx, next) => {
+    await ctx.render('help');
 });
 
 router.get('/search', async (ctx, next) => {
