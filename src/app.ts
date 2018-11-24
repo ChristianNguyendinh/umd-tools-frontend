@@ -2,6 +2,7 @@ import Koa from 'koa';
 import views from 'koa-views';
 import KoaRouter from 'koa-router';
 import config from './config';
+import serve from 'koa-static';
 
 const app = new Koa();
 const router = new KoaRouter();
@@ -11,6 +12,8 @@ app.use(views(`${__dirname}/views`, {
         html: 'lodash'
     }
 }));
+
+app.use(serve(`${__dirname}/static`));
 
 app.use(async (ctx, next) => {
     try {

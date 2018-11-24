@@ -5,8 +5,10 @@
   "main": "server.js",
   "scripts": {
     "clean": "rm -rf dist && mkdir -p dist",
-    "copy-static": "cp -r src/views dist",
-    "build": "npm run clean && npm run copy-static && tsc",
+    "copy-views": "cp -r src/views dist",
+    "copy-static": "cp -r src/static dist",
+    "copy": "npm run copy-views && npm run copy-static",
+    "build": "npm run clean && npm run copy && tsc",
     "start": "node dist/server.js",
     "test": "npm run test"
   },
@@ -23,10 +25,12 @@
     "@types/koa": "^2.0.47",
     "@types/koa-joi-router": "^5.1.0",
     "@types/koa-router": "^7.0.35",
+    "@types/koa-static": "^4.0.0",
     "@types/koa-views": "^2.0.3",
     "koa": "^2.6.2",
     "koa-joi-router": "^5.1.0",
     "koa-router": "^7.4.0",
+    "koa-static": "^5.0.0",
     "koa-views": "^6.1.4",
     "lodash": "^4.17.11",
     "typescript": "^3.1.6"

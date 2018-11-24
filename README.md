@@ -18,3 +18,7 @@ Keeps track of how fast UMD Computer Science Upper Level courses fill up during 
 
 Allows searching UMD courses with additional building and class time filter parameters.
 
+## TODO:
+- convert JS in HTML to TS
+    - actually, then we would have to statically host...
+        - actually we need that anyway for CS tracker
