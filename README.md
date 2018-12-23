@@ -14,13 +14,13 @@ Keeps track of how fast UMD Computer Science Upper Level courses fill up during 
 
 #### UMD Course Search
 
-[Github link](https://github.com/ChristianNguyendinh/cs-upper-level-registration-stats)
+[Github link](https://github.com/ChristianNguyendinh/umd-course-search)
 
 Allows searching UMD courses with additional building and class time filter parameters.
 
 ## Dev
 
-`src/static/dist` needs 5 libraries:
+`src/static/dist` needs 5 external libraries:
 - `bootstrap.min.css`
 - `bootstrap.min.js`
 - `d3.min.js`
@@ -28,7 +28,5 @@ Allows searching UMD courses with additional building and class time filter para
 - `jquery.min.js`
 
 ## TODO:
-- clean up route paths
+- UI redesign cause it looks gross now
 - convert JS in HTML to TS
-    - actually, then we would have to statically host...
-        - actually we need that anyway for CS tracker
